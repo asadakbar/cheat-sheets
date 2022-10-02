@@ -1,0 +1,28 @@
+# Display current version set or being used for all packages
+asdf current
+
+# Update a plugin
+asdf plugin update ruby
+
+# Install a version
+asdf install nodejs 14.17.3
+
+# List all available versions
+asdf list all ruby
+
+# List installed versions
+asdf list ruby
+
+# Use a version
+asdf local nodejs latest
+asdf global nodejs latest
+
+# Force a reshim
+rm -rf ~/.asdf/shims && asdf reshim
+
+# Improve shell performace by using direnv plugin
+# see https://github.com/asdf-community/asdf-direnv
+asdf plugin-add direnv
+asdf direnv setup --shell zsh --version latest
+asdf direnv local
+
